@@ -1,0 +1,69 @@
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '../assets/css/_material';
+
+
+//top navbar
+.toolbar {
+
+    .left{
+        flex :1;
+        text-align : left;
+
+        li {
+        display : inline-block;
+        padding-right: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+
+        }
+    }
+    .middle {
+        flex : 3;
+        text-align: center;
+
+    }
+    .right{
+        flex : 1;
+        text-align: right;
+
+        li {
+        display : inline-block;
+        padding-right: 8px;
+        }
+    }
+    
+}
+
+.ex_spacer {
+    flex: 1 1 auto;
+}
+
+/**.navbar-top-links {
+    float: right;
+    text-align: right;
+}
+.nav {
+    padding-left: 0;
+    width: 100%;
+
+    li {
+        display : inline-block;
+        padding-right: 8px;
+        color: #999c9e;
+    }
+}**/
+/**.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}**/
+
+.navbar-right {
+  margin-right: 10px;
+}
