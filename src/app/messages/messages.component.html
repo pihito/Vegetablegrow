@@ -1,0 +1,10 @@
+
+  <div>
+  <p *ngFor="let alert of messageService.alerts">
+    <ngb-alert [type]="alert.type" (close)="messageService.supp(alert)">{{ alert.message }}</ngb-alert>
+  </p>
+  <p>
+    <button type="button" class="btn btn-primary" (click)="messageService.reset()">Reset</button>
+  </p>
+</div>
+

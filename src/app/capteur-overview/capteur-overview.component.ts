@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {NodeService} from '../node.service';
+import {Node,Capteur} from '../model/capteur';
 
 @Component({
   selector: 'app-capteur-overview',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CapteurOverviewComponent implements OnInit {
 
-  constructor() { }
+  nodes : Node[];
 
+  constructor(private nodeService : NodeService) {
+   }
+
+  getNode() : void {
+     this.nodeService.getNodes()
+      .subscribe(nodes => this.nodes = nodes);
+  }
   ngOnInit() {
+    this.getNode();
   }
 
 }

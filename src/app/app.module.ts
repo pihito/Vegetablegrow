@@ -58,13 +58,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CapteurOverviewComponent } from './capteur-overview/capteur-overview.component';
 import { AdminComponent } from './admin/admin.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     CapteurOverviewComponent,
-    AdminComponent
+    AdminComponent,
+    MessagesComponent
   ],
  
 
