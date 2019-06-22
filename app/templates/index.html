@@ -1,0 +1,45 @@
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyAA96WuSQFh2NxxPKjs3MxqAEEGwHV2uaY",
+    authDomain: "vegetablegrow.firebaseapp.com",
+    databaseURL: "https://vegetablegrow.firebaseio.com",
+    projectId: "vegetablegrow",
+    storageBucket: "vegetablegrow.appspot.com",
+    messagingSenderId: "371341768043",
+    appId: "1:371341768043:web:a0e401a3c0c94395"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.css">
+<html>
+    <body>
+        <h1>Vegetable grow application</h1>
+
+        <div id="firebaseui-auth-container"></div>
+        
+        <button id="sign-out" hidden=true>Sign Out</button>
+        
+        <div id="login-info" hidden=true>
+          <h2>Login info:</h2>
+          {% if user_data %}
+            <dl>
+              <dt>Name</dt><dd>{{ user_data['name'] }}</dd>
+              <dt>Email</dt><dd>{{ user_data['email'] }}</dd>
+              <dt>Last 10 visits</dt><dd>
+                {% for time in times %}
+                  <p>{{ time['timestamp'] }}</p>
+                {% endfor %} </dd>
+            </dl>
+          {%endif%}
+          {% if error_message %}
+            <p>Error: {{ error_message }}</p>
+          {% endif %}
+        </div>
+
+        {% if current_user.is_authenticated %}
+{% endif %}
+    </body>
+</html>

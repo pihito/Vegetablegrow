@@ -1,0 +1,6 @@
+Flask
+google-cloud-datastore
+google-auth
+requests
+flask-login
+google-api-python-client

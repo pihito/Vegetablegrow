@@ -1,14 +1,10 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# compiled output
-/dist
-/tmp
-/out-tsc
-# Only exists if Bazel was run
-/bazel-out
+#google credential 
+VegetableGrow-2256a0cc9140.json
 
-# dependencies
-/node_modules
+# python env
+/venv
 
 # profiling files
 chrome-profiler-events.json
@@ -36,9 +32,6 @@ speed-measure-plugin.json
 /connect.lock
 /coverage
 /libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
 /typings
 
 # System Files

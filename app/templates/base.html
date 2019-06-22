@@ -1,0 +1,41 @@
+ {% block doc %}
+    <html lang="en">
+    {% block html %}
+        <head>
+            {% block head %}
+                <title>VegetableGrow</title>
+
+                {% block metas %}
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta charset="utf-8">
+                {% endblock metas %}
+
+                {%- block styles %}
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+                    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+                {% endblock styles %}
+            {% endblock head %}
+        </head>
+
+        <body>
+            {% block body %}
+                {% block navbar %}
+                    {% include 'navBar.html' %}
+                {% endblock navbar %}
+            
+                {% block content %}
+                {% endblock content %}
+
+                {% block scripts %}
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                    <script src="{{ url_for('static', filename='navbar.js') }}"></script> 
+                {% endblock scripts %}
+                
+                {% block footer %}
+                {%- endblock footer %}
+            {%- endblock body %}
+         </body>
+    {%- endblock html %}
+    </html>
+{% endblock doc %}

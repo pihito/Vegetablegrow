@@ -1,0 +1,18 @@
+{% block navbar %}
+    <nav class=" blue darken-4">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Vegetable Grow</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+              <li><a href= {{ url_for('static', filename='home') }}>Taleau de bord</a></li>
+              <li><a href={{ url_for('static', filename='capteur') }}>capteur</a></li>
+            </ul>
+            <a class='dropdown-trigger btn right' href='#' data-target='dropdown1'>{{current_user.nom}} {{current_user.prenom}}</a>
+        </div>
+
+        <!-- Dropdown user profile -->
+        <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!"><i class="small material-icons">exit_to_app</i>logout</a></li>
+            <li><a href="#!"><i class="material-icons">view_module</i>my profile</a></li>
+        </ul>
+    </nav>
+{% endblock navbar %}
