@@ -6,6 +6,10 @@ VegetableGrow-2256a0cc9140.json
 # python env
 /venv
 
+#python cache
+__pycache__/
+*.pyc 
+
 # profiling files
 chrome-profiler-events.json
 speed-measure-plugin.json
@@ -37,3 +41,4 @@ speed-measure-plugin.json
 # System Files
 .DS_Store
 Thumbs.db
+*.pyc

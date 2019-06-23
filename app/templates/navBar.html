@@ -3,8 +3,8 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo center">Vegetable Grow</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-              <li><a href= {{ url_for('static', filename='home') }}>Taleau de bord</a></li>
-              <li><a href={{ url_for('static', filename='capteur') }}>capteur</a></li>
+              <li><a href= {{ url_for('homePage.home') }}>Taleau de bord</a></li>
+              <li><a href={{ url_for('capteur.home') }}>capteur</a></li>
             </ul>
             <a class='dropdown-trigger btn right' href='#' data-target='dropdown1'>{{current_user.nom}} {{current_user.prenom}}</a>
         </div>
